@@ -11,7 +11,6 @@ import os
 import datetime as dt 
 import numpy as np
 import shutil
-#import aux2 as aux
 from create_input_for_lblrtm import create_TAPE5
 
 def run_LBLRTM(z, p, t, q, hmd_unit, wnum1, wnum2, lbltp5, lbl_home, path, 
@@ -36,7 +35,7 @@ def run_LBLRTM(z, p, t, q, hmd_unit, wnum1, wnum2, lbltp5, lbl_home, path,
     ROOT_LBLRUN_TAG="_{}_{}_{}".format(os.uname()[1], LBLRUN_DATE, LBLRUN_TIME)
     LBLRUN_TAG=ROOT_LBLRUN_TAG
     LBL_WORK="{}/.lblrtm{}".format(path, LBLRUN_TAG)
-    LBL_WORK = LBL_WORK
+
     # -- Make sure the directory doesn't already exist. If it does, suffix
     # -- the name with an _ and an integer identifier.
     LBLRUN_SUFFIX=0
