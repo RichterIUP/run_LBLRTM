@@ -84,7 +84,7 @@ if __name__ == '__main__':
         lbl_home = file_.readline().rstrip()
         path = file_.readline().rstrip()
     
-    atm_grid = pd.read_csv("atm_grid")
+    atm_grid = pd.read_csv("atm_grid.csv")
     z = np.array(atm_grid["altitude(km)"])
     p = np.array(atm_grid["pressure(hPa)"])
     t = np.array(atm_grid['temperature(K)'])
