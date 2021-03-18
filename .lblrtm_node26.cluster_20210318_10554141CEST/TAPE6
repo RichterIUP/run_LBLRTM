@@ -1,0 +1,221 @@
+1
+0  LBLRTM run for TCWret                                                  LBLRTM    21/18/03  10:55:41
+0  TIME ENTERING LBLRTM           0.0000
+ HIRAC    LBLF4    CNTNM    AERSL    EMISS    SCNFN    FILTR     PLOT     TEST     IATM     IMRG     ILAS    OPDEP    XSECT   ISOTPL     IBRD
+    1        1        1        0        0        0        0        0        0        1        1        0        0        1        0        0
+0
+0                       LINE FILE INFORMATION 
+0$ f100 format                                           V:  2.8                I   12/14/08   8:31:02
+0
+                       COUPLED    NLTE   SUM LBLRTM 
+       MOL     LINES    LINES    LINES    STRENGTHS
+
+       H2O  =  21403        0        0    8.9578E-19
+       CO2  = 241059   201879        0    5.7218E-20
+        O3  = 372127        0        0    7.0126E-20
+       N2O  =  37566        0        0    4.1200E-20
+        CO  =   1893        0        0    7.2320E-21
+       CH4  = 177212      931        0    7.8142E-21
+        O2  =   2422        0        0    8.7826E-25
+
+0 LOWEST LINE =     10.002       HIGHEST LINE =   3499.997      TOTAL NUMBER OF LINES =  853682
+                                                                                                                        
+                                                                                                                        
+                  *** CONTINUA mt_ckd_3.2                                                                               
+                                                                                 Most recent significant change         
+                         H2O  SELF  (T)     0 - 20000 CM-1              mt_ckd_3.2 - Cs>2000,T 1800-3500 cm-1 (Aug 2017)
+                              AIR           0 - 20000 CM-1              mt_ckd_3.0 - modify 0-700 cm-1        (Nov 2016)
+                         CO2  AIR           0 - 10000 CM-1              mt_ckd_2.5 - modify 2000-3000 cm-1    (Jan 2010)
+                              AIR   (T)  2386 -  2434 CM-1              mt_ckd_2.5 - temperature dep. added   (Jan 2010)
+                         N2   SELF  (T)     0 -   350 CM-1              ckd_2.2    - Borysow Fromhold         (Feb 1996)
+                              AIR   (T)     0 -   350 CM-1              mt_ckd_2.1 - incl. O2 rel. efficiency (Sep 2004)
+                              AIR   (T)  1993 -  2905 CM-1              mt_ckd_2.8 - N2-H2O Mlawer/Alvarado   (Mar 2016)
+                              AIR        4340 -  4910 CM-1              mt_ckd_2.7 - Mlawer and Gombos        (May 2015)
+                         O2   AIR   (T)  1340 -  1850 CM-1              ckd_2.4.1  - Thibault et al.          (Mar 1998)
+                              O2/N2      7550 -  8486 CM-1              ckd_2.4.1  - Mate et al.              (Feb 2000)
+                              AIR        9100 - 11000 CM-1              ckd_2.4.1  - Mlawer et al.            (Aug 1999)
+                         O2   AIR     12990 - 13223 CM-1                mt_ckd_3.1  - Mlawer and Gombos       (Jul 2017)
+                              O2        15000 - 29870 CM-1              ckd_2.4.2  - Greenblatt et al.        (May 2000)
+                              O2/N2     36000 -  >>>> CM-1 HERZBERG     ckd_0                                           
+                         O3   AIR   (T)  9170 - 24565 CM-1 CHAPP/WULF   ckd_2.2                               (Feb 1996)
+                                    (T) 27370 - 40800 CM-1 HARTL/HUGG   ckd_0                                           
+                                        40800 - 54000 CM-1 HARTL/HUGG   ckd_0                                           
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+Continuum    LBL_n                      Description of Modification                                            Date     
+---------    -----                    -------------------------------                                          ----     
+                    H2O SELF HAS BEEN REDUCED IN THE 800-1200 CM-1 REGION                                  (01 SEP 1985)
+                    03       TEMPERATURE DEPENDENCE HAS BEEN CORRECTED                                     (01 MAY 1987)
+                    02       (1390-1760) HAS BEEN REDUCED (FACTOR = 0.78)                                  (07 MAR 1990)
+ ckd_1.0      2.2   H2O SELF HAS BEEN REDUCED IN THE 1100-1500 CM-1 REGION                                 (01 APR 1993)
+     "              H2O FOREIGN HAS BEEN REDUCED AT ~1300 CM-1 AND IN ALL THE WINDOW REGIONS               (01 APR 1993)
+ ckd_2.1      3.3   H2O SELF HAS BEEN MODIFIED IN THE 700-1500 CM-1 REGION                                 (01 MAY 1994)
+     "              H2O FOREIGN HAS BEEN MODIFIED IN THE ENTIRE 1200-2200 CM-1 SPECTRAL RANGE              (01 MAY 1994)
+ ckd_2.2      3.7   H2O SELF HAS BEEN INCREASED 30% IN THE MICROWAVE REGION                                (09 FEB 1996)
+     "              N2 COLLISION INDUCED PURE ROTATION BAND ADDED                                          (09 FEB 1996)
+     "              O3 CHAPPUIS CHANGED TO VALUES FROM MODTRAN3                                            (09 FEB 1996)
+ ckd_2.2.2    3.12  INTERPOLATION EFFECTS BETWEEN HARTLEY HUGGINS DATA AROUND 40800 CM-1                   (18 SEP 1996)
+ ckd_2.4.1    5.12  O2 COLLISION INDUCED FUNDAMENTAL BAND (1340-1850 CM-1) CHANGED TO THIBAULT ET AL., 1996   (MAR 1998)
+     "              N2 COLLISION INDUCED FUNDAMENTAL BAND (2085-2670 CM-1) CHANGED TO LAFFERTY ET AL., 1996   (MAR 1998)
+     "              H2O FOREIGN HAS BEEN MODIFIED IN THE 0-800 CM-1 AND 1200-2200 CM-1 RANGE BASED ON      (04 JUN 1999)
+     "                       AERI-ER FROM SHEBA, TOBIN ET AL., 1998                                                     
+     "              H2O SELF HAS BEEN INCREASED IN THE 0-200 CM-1 REGION                                   (04 JUN 1999)
+     "              O2 COLLISION INDUCED BAND HAS BEEN ADDED  (9100 - 11000 CM-1); MLAWER ET AL. 1998      (16 AUG 1999)
+     "              O2 COLLISION INDUCED BAND HAS BEEN CHANGED (7555 - 8486 CM-1); MATE ET AL. 1999        (10 FEB 2000)
+ ckd_2.4.2    5.17  O2 COLLISION INDUCED BANDS HAVE BEEN ADDED (15000 - 29870 CM-1); GREENBLATT ET AL. 1990 (8 MAY 2000)
+     "              The nu2 CO2 increased by a factor of 7: based on U  Wisc. AFWEX and AERI_xr at ARM NSA    (Jul 2002)
+ mt_ckd_1.00  7.01  *********   The entire water vapor continuum has been revised   *********                 (Dec 2002)
+     "              *********   This continuum is based on a new line shape/collision induced formulation, mt_ckd ******
+ mt_ckd_1.1   9.1   H2O foreign modified in the 250-550 cm-1 region; results now consistent with ckd_2.4.1    (Aug 2004)
+ mt_ckd_1.2   9.2   Collision induced nitrogen 0-350 cm-1 increased (~1.35):  Boissoles at al., 2003          (Sep 2004)
+ mt_ckd_1.3  10.0   Nu2 CO2: with P-R line mixing included; factor of 7 increase has been reduceed to 4.5     (May 2006)
+ mt_ckd_2.0  11.1   CO2: Based on Hartmann P-Q-R line mixing.  Modification to v3 band based on AIRS data.    (Jul 2007)
+ mt_ckd_2.01 11.2   H2O foreign modified in 250-550 cm-1 region based on analyses of nsa aeri_er data.        (Sep 2007)
+ mt_ckd_2.1  11.3   CO2: Fundamental change in the lblrtm fourth function with consequent changes in continuum(Nov 2007)
+     "              Bug fix impacting the nitrogen continuum in the 0-350 cm-1 region.                        (Nov 2007)
+ mt_ckd_2.2  11.4   Analytic Derivative (species retrievals): n2 continuum removed from Jacobian calculation  (Mar 2008)
+ mt_ckd_2.3  11.5   Bug fix: corrects error in which Analytic Derivative result depends on starting wavenumber(Aug 2008)
+ mt_ckd_2.4  11.6   H2O: modification to self and foreign continuum (microwave and IR ARM data 0-600 cm-1)    (Nov 2008)
+ mt_ckd_2.5  11.7   CO2: modification from 2000-3200 cm-1 (AERI(ARM),IASI AIRS measurements); Temp. dep. added(Jan 2010)
+     "              H2O: modification to self cont. 2000-3000 cm-1   (IASI data, fit to near-IR results of              
+     "              Bicknell et al., 2006 and Fulghum and Tilleman,  1991                                               
+ mt_ckd_2.5.1 11.8  Updated common block for constants                                                        (May 2010)
+ mt_ckd_2.5.2 12.0  Minor bug fixes, updated continuum summary info,  made consistent with monortm contnm.f   (Jan 2011)
+ mt_ckd_2.5.3  -    Cosmetic changes                                                                          (Mar 2015)
+ mt_ckd_2.7   12.4  N2 1st overtone - Shapiro & Gush (1966) modified by Mlawer and Gombos based on solar FTS  (Apr 2015)
+                    Bug fix for analytic jacobians                                                            (Feb 2016)
+ mt_ckd_2.8   12.5  N2-H2O from 2000-3000 cm-1,H2O self for 2000-3190 cm-1,H2O foreign in windows >1880 cm-1  (Jul 2016)
+ mt_ckd_3.0   12.6  H2O: foreign/self 0-700/0-100 cm-1; RHUBC-II/-I; REFIR,AERI,SAO-FTS; Mlawer,Turner,Paine  (Nov 2016)
+ mt_ckd_3.1   12.7  O2 A-band: Mlawer and Gombos based on analysis ofTCCON FTS measurements for OCO-2         (Jul 2017)
+ mt_ckd_3.2   12.8  H2O self > 2000 cm-1 and tdep 1800-3500 cm-1: Campargue group and IASI obs; Mlawer et al. (Aug 2017)
+                    ----------------------------------------------------------------------------------------------------
+                    ----------------------------------------------------------------------------------------------------
+
+  The continuum scale factors are as follows: 
+     H2O Self:         1.000
+     H2O Foreign:      1.000
+     CO2:              1.000
+     O3:               1.000
+     O2:               1.000
+     N2:               1.000
+     Rayleigh:         1.000
+
+1                    *****PROGRAM LBLATM*****       21/18/03       10:55:41
+
+
+
+ CONTROL CARD 3.1: MODEL AND OPTIONS 
+
+          MODEL   =     0
+          ITYPE   =     2
+          IBMAX   =    50
+          n_zero  =     1
+          NOPRNT  =     1
+          NMOL    =     7
+          IPUNCH  =     1
+          IFXTYP  =     0
+          MUNITS  =     0
+          RE      =      0.000 KM
+          HSPACE  =      0.000 KM
+          VBAR    =      0.000 CM-1
+          REF_LAT =     45.000 DEG
+
+
+
+ CONTROL CARD 3.1 PARAMETERS WITH DEFAULTS:
+
+          MODEL   =     0
+          ITYPE   =     2
+          IBMAX   =    50
+          n_zero  =     1
+          NOPRNT  =     1
+          NMOL    =     7
+          IPUNCH  =     1
+          IFXTYP  =     0
+          MUNITS  =     0
+          RE      =   6371.230 KM
+          HSPACE  =    100.000 KM
+          VBAR    =   1250.000 CM-1
+          REF_LAT =     45.000 DEG
+
+
+
+ SLANT PATH SELECTED, ITYPE =     2
+
+
+
+ CONTROL CARD 3.2:  SLANT PATH PARAMETERS
+
+          H1      =     0.000000 KM
+          H2      =    20.000000 KM
+          ANGLE   =     0.000000 DEG
+          RANGE   =     0.000000 KM
+          BETA    =     0.000000 DEG
+          LEN     =          0
+
+
+
+ USER DEFINED BOUNDARIES FOR LBLRTM LAYERS
+          I    Z (KM)
+
+             1     0.00000000
+             2     0.03200000
+             3     0.07200000
+             4     0.12800001
+             5     0.20000000
+             6     0.28799999
+             7     0.39199999
+             8     0.51200002
+             9     0.64800000
+            10     0.80000001
+            11     0.96799999
+            12     1.15199995
+            13     1.35200000
+            14     1.56799996
+            15     1.79999995
+            16     2.04800010
+            17     2.31200004
+            18     2.59200001
+            19     2.88800001
+            20     3.20000005
+            21     3.52800012
+            22     3.87199998
+            23     4.23199987
+            24     4.60799980
+            25     5.00000000
+            26     5.40799999
+            27     5.83199978
+            28     6.27199984
+            29     6.72800016
+            30     7.19999981
+            31     7.68800020
+            32     8.19200039
+            33     8.71199989
+            34     9.24800014
+            35     9.80000019
+            36    10.36800003
+            37    10.95199966
+            38    11.55200005
+            39    12.16800022
+            40    12.80000019
+            41    13.44799995
+            42    14.11200047
+            43    14.79199982
+            44    15.48799992
+            45    16.20000076
+            46    16.92799950
+            47    17.67200089
+            48    18.43199921
+            49    19.20800018
+            50    20.00000000
+
+
+
+ READING IN USER SUPPLIED MODEL ATMOSPHERE
+
+
+          IMMAX    =    50
+          PROFILE =  Atmospheric layers     
+0 INVALID PARAMETER :  0

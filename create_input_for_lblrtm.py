@@ -34,7 +34,8 @@ import numpy as np
 #= 5  subarctic winter model
 #= 6  U.S. standard 1976
 def create_TAPE5(z, p, t, w, tape5, atm, hmd_unit, wnum1, wnum2, \
-              co2=None, o3=None, co=None, ch4=None, n2o=None, o2=None):
+              co2=None, o3=None, co=None, ch4=None, n2o=None, o2=None, \
+              XSELF=1, XFRGN=1, XCO2C=1, XO3CN=1, XO2CN=1, XN2CN=1, XRAYL=1):
    
     view_angle=0.0 # Downwelling
     resolution = 1.0
@@ -82,7 +83,7 @@ def create_TAPE5(z, p, t, w, tape5, atm, hmd_unit, wnum1, wnum2, \
     ihirac = 1#Voigt profile
     ilblf4 = 1#line by line bound is 25cm-1 for all layer pressures (altitudes)
     #icntnm = 0#no continuum calculated
-    icntnm = 1#all continua calculated, including Rayleigh extinction where applicable
+    icntnm = 6#all continua calculated, including Rayleigh extinction where applicable
     iaersl = 0#no aerosols used
     iemit  = 0#optical depth only
     iscan  = 0
@@ -99,7 +100,7 @@ def create_TAPE5(z, p, t, w, tape5, atm, hmd_unit, wnum1, wnum2, \
               #as result of merge of current layer with previous layers 
     model_atm = 0#User defined profile
     itype = 2 #slant path from H1 to H2, use RECORD 3.2
-    noprint = 1#selects shirt printout
+    noprint = 1#selects short printout
     nmol = 7#number of molecular species
     ipunch = 1# layer data written to unit ITAPE7)PU (TAPE7)
     h2o_sf = 1.0#Scaling factor for H2O
@@ -149,7 +150,9 @@ def create_TAPE5(z, p, t, w, tape5, atm, hmd_unit, wnum1, wnum2, \
     rec_1_2 += ' XS={:1d}'.format(ixsect)
     rec_1_2 += ' {:4d}'.format(mpts)
     rec_1_2 += ' {:4d}'.format(npts)
-    #rec_1_2 += '   00   00'
+    rec_1_2 += '   00   00'
+    if icntnm == 6:
+        rec_1_2 += "\n {:1d} {:1d} {:1d} {:1d} {:1d} {:1d} {:1d}".format(XSELF, XFRGN, XCO2C, XO3CN, XO2CN, XN2CN, XRAYL)
 
     ####################
     # Write Record 1.3 #

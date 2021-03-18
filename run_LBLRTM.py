@@ -14,8 +14,8 @@ import shutil
 from create_input_for_lblrtm import create_TAPE5
 
 def run_LBLRTM(z, p, t, q, hmd_unit, wnum1, wnum2, lbltp5, lbl_home, path, 
-               co2=None, o3=None, co=None, ch4=None, n2o=None, o2=None):
-    create_TAPE5(z, p, t, q, lbltp5, 0, hmd_unit, wnum1, wnum2, co2, o3, co, ch4, n2o, o2)
+               co2=None, o3=None, co=None, ch4=None, n2o=None, o2=None,  XSELF=1, XFRGN=1, XCO2C=1, XO3CN=1, XO2CN=1, XN2CN=1, XRAYL=1):
+    create_TAPE5(z, p, t, q, lbltp5, 0, hmd_unit, wnum1, wnum2, co2, o3, co, ch4, n2o, o2, XSELF, XFRGN, XCO2C, XO3CN, XO2CN, XN2CN, XRAYL)
         
     LBL_HOME = lbl_home
     T3_FILE = "tape3.data"
@@ -98,13 +98,22 @@ if __name__ == '__main__':
          225.243329973, 227.262907582, 228.317952383, 228.861412332, 228.843405442, 228.573161, \
          228.953055371, 229.14674716, 229.541472058, 229.232789713, 229.625510244, 229.774010109, \
          229.77615013, 229.971814334, 230.00521917])
-    q = np.array([4.43525008771, 4.43525008771, 3.91163212244, 4.11013212532, 4.09430589408, 4.20118246395, \
-         3.96302160684, 3.79492112852, 3.72098837478, 3.46258558754, 3.40618549525, 3.08298591678, \
-         2.59367328686, 2.44014813401, 2.05108776133, 2.26184155599, 1.86362280966, 1.47139101628, \
-         1.21534239674, 1.14851623259, 1.21928331259, 1.01076543751, 0.823743251872, 0.614694927612, \
-         0.54732936928, 0.409350331268, 0.263205149464, 0.188926862496, 0.149236855357, 0.126514591073, \
-         0.101879556598, 0.0612401049152, 0.0545139393063, 0.0340927948804, 0.0221047169385, 0.0235166588019, \
-         0.00356754891666, 0.00197738522031, 0.00107859019429, 0.00114148083765, 0.00113934522762, \
-         0.00110772385208, 0.00115240565472, 0.00117580628454, 0.00122482417583, 0.00118633803273, \
-         0.00123549487023, 0.0012545554029, 0.00125483200763, 0.00128035552547, 0.00128475944956])
-    lbldir = run_LBLRTM(z, p, t, q, lbltp5='tp5', lbllog='lbllog.txt', lbl_home="/home/philipp/RADIATIVE_TRANSFER/lblrtm", path=".")
+    q = 75 * np.ones(t.size)
+    
+    z_tg = np.loadtxt("trace_gases/z.csv", delimiter=",")
+    ch4_tg = np.loadtxt("trace_gases/ch4.csv", delimiter=",")
+    co_tg = np.loadtxt("trace_gases/co.csv", delimiter=",")
+    co2_tg = np.loadtxt("trace_gases/co2.csv", delimiter=",")
+    n2o_tg = np.loadtxt("trace_gases/n2o.csv", delimiter=",")
+    o2_tg = np.loadtxt("trace_gases/o2.csv", delimiter=",")
+    o3_tg = np.loadtxt("trace_gases/o3.csv", delimiter=",")
+    
+    ch4 = np.interp(z, z_tg, ch4_tg)
+    co = np.interp(z, z_tg, co_tg)
+    co2 = np.interp(z, z_tg, co2_tg)
+    n2o = np.interp(z, z_tg, n2o_tg)
+    o2 = np.interp(z, z_tg, o2_tg)
+    o3 = np.interp(z, z_tg, o3_tg)
+    lbldir = run_LBLRTM(z, p, t, q, "H", 500, 2000, lbltp5='tp5', lbl_home="/home/phi.richter/radiative_transfer/lblrtm", path=".", \
+                       co=co, co2=co2, n2o=n2o, o2=o2, o3=o3, ch4=ch4)
+    print(lbldir)
